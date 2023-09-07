@@ -2,6 +2,8 @@
 
 by [Bright Odohofre](https://twitter.com/B_Odohofre)
 
+[Live Site](https://odohofre.github.io/HNGX/stage-1/)
+
 ## Project Description
 
 This is a simple webpage that showcases specific personal and real-time data attributes using HTML, CSS, and Javascript.
@@ -14,4 +16,4 @@ It includes the following elements:
 - Track
 - Github URL for the project
 
-Each element is identified bya a `data-testid` attribute for easy identification and testing.
+Each element is identified by a `data-testid` attribute for easy identification and testing.
