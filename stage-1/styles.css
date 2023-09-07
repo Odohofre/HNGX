@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+  background-color: #ff8c00;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #0073e6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
