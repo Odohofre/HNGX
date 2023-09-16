@@ -9,4 +9,4 @@ The HNG Internship is a virtual program for aspiring developers, designers and p
 This repository contains links done by me as it pertains to each stage. I will update it as I progress.
 
 - [Stage one](https://odohofre.github.io/HNGX/stage-1/)
-- [Stage two](https://odohofre.github.io/HNGX/stage-2/)
+- [Stage two](https://moviebox-blush.vercel.app/)

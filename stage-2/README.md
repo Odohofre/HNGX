@@ -1,5 +1,7 @@
 # Movie Discovery Web Application
 
+[Live site](https://moviebox-blush.vercel.app/)
+
 This project is a movie discovery web application that allows users to search for movies, view details about them, and save their favorite movies. The application consumes data from the TMDB API.
 
 ## Getting Started
