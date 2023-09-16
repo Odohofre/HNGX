@@ -41,7 +41,7 @@ export default function MoviePage() {
     if (movieData && movieData.genres && movieData.genres.length > 0) {
       return movieData.genres.map((genre) => (
         <span
-          className="text-[15px] text-red-700 border rounded-[15px] px-[17px] py-1"
+          className="text-[15px] text-red-700 border rounded-[15px] px-3 lg:px-[17px] py-1"
           key={genre.name}
         >
           {genre.name}
@@ -93,9 +93,9 @@ export default function MoviePage() {
   }
 
   return (
-    <main className="w-screen px-5 pt-5 flex flex-col items-center">
+    <main className="w-full px-5 pt-5 lg:flex flex-col items-center">
       {movie && movie.videos && movie.videos.results.length > 2 && (
-        <div className="overflow-hidden pb-[35%] rounded-[20px] relative w-full">
+        <div className="overflow-hidden pb-[100%] lg:pb-[35%] rounded-[20px] relative w-full">
           <iframe
             className="absolute w-full h-full top-0 left-0"
             src={`https://www.youtube.com/embed/${movie.videos.results[2].key}`}
@@ -106,10 +106,10 @@ export default function MoviePage() {
         </div>
       )}
 
-      <div className="flex flex-col lg:flex-row mt-5">
+      <div className="flex flex-col items-center lg:px-5 lg:flex-row mt-5">
         <section className="font-poppins font-medium mb-8">
           <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
-            <div className="flex text-neutral-700 lg:text-xl font-medium font-poppins  space-x-4">
+            <div className="flex text-neutral-700 lg:text-xl font-medium font-poppins space-x-2  lg:space-x-4">
               <h2 className="" data-testid="movie-title">
                 {movie.title}
               </h2>
@@ -118,7 +118,7 @@ export default function MoviePage() {
               <span></span>•
               <span data-testid="movie-runtime">{movie.runtime} minutes</span>
             </div>
-            <div className="flex items-center  space-x-2.5">
+            <div className="flex items-center space-x-2.5">
               {extractGenre(movie)}
             </div>
           </div>
@@ -133,10 +133,10 @@ export default function MoviePage() {
             <p>Writers: {extractWriter(movie)}</p>
             <p>Stars: {extractCast(movie)}</p>
           </div>
-          <div className="mt-6 font-medium border rounded-[10px] flex items-center bg-white/80 border-[#c7c7c7] pr-0  relative">
-            <span className="text-white bg-rose-700 rounded-[10px] py-3 px-5 mr-3 lg:mr-6">
+          <div className="mt-6 font-medium border rounded-[10px] flex flex-col lg:flex-row items-center pb-4 lg:pb-4 bg-white/80 border-[#c7c7c7] relative">
+            <span className="text-white bg-rose-700 rounded-[10px] text-center py-3 px-5 w-full mb-3 lg:mb-0 lg:mr-6">
               {' '}
-              Top Rated movie
+              Top Rated movie #65
             </span>
             Awards 9 nominations{' '}
             <img
