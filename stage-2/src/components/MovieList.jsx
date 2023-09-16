@@ -35,7 +35,7 @@ export default function MovieList() {
     fetchMovies();
   }, []);
   return (
-    <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))]  gap-x-9 gap-y-24">
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))]  gap-x-9 gap-y-10 lg:gap-y-20">
       {movies.map((movie) => (
         <MovieCard
           id={movie.id}
