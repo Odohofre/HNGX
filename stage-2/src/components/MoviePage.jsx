@@ -108,8 +108,8 @@ export default function MoviePage() {
 
       <div className="flex flex-col lg:flex-row mt-5">
         <section className="font-poppins font-medium mb-8">
-          <div className="flex space-x-4">
-            <div className="flex text-neutral-700 text-xl font-medium font-poppins  space-x-4">
+          <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
+            <div className="flex text-neutral-700 lg:text-xl font-medium font-poppins  space-x-4">
               <h2 className="" data-testid="movie-title">
                 {movie.title}
               </h2>
@@ -133,14 +133,14 @@ export default function MoviePage() {
             <p>Writers: {extractWriter(movie)}</p>
             <p>Stars: {extractCast(movie)}</p>
           </div>
-          <div className="mt-6 font-medium border rounded-[10px] flex items-center bg-white/80 border-[#c7c7c7]  relative">
-            <span className="text-white bg-rose-700 rounded-[10px] py-3 px-5 mr-6">
+          <div className="mt-6 font-medium border rounded-[10px] flex items-center bg-white/80 border-[#c7c7c7] pr-0  relative">
+            <span className="text-white bg-rose-700 rounded-[10px] py-3 px-5 mr-3 lg:mr-6">
               {' '}
               Top Rated movie
             </span>
             Awards 9 nominations{' '}
             <img
-              className="absolute right-[2%] top-[20%]"
+              className="absolute hidden lg:block right-[2%] top-[20%]"
               src={arrow}
               alt="a downward arrow"
             />

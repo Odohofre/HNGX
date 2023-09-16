@@ -2,12 +2,12 @@ import MovieList from './MovieList';
 
 export default function Movies() {
   return (
-    <main className="px-20 py-[70px]">
-      <div className="flex justify-between mb-11">
-        <h2 className="text-4xl font-bold">Featured Movie</h2>
+    <main className="px-8 lg:px-20 py-12 lg:py-[70px]">
+      <div className="flex justify-between mb-4 lg:mb-10">
+        <h2 className="text-2xl lg:text-4xl  font-bold">Featured Movie</h2>
         <a
           href="#"
-          className="flex items-center text-rose-700 text-lg leading-[24px]"
+          className="flex items-center text-rose-700 lg:text-lg leading-[24px]"
         >
           See more
           <svg

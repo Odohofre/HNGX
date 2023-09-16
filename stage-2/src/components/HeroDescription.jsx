@@ -13,7 +13,7 @@ export default function HeroDescription() {
   }, []);
 
   return (
-    <article className={`flex flex-col gap-4 max-w-[25rem] ${isVisible ? 'ml-auto lg:ml-[8%]' : '-ml-96'} transition-all duration-1000 ease-in-out m-auto`}>
+    <article className={`flex flex-col gap-4 max-w-[25rem] ${isVisible ? 'ml-[10%] lg:ml-[8%]' : '-ml-96'} transition-all duration-1000 ease-in-out m-auto`}>
       <h2 className="text-5xl leading-[56px] font-bold">
         John Wick 3 : Parabelleum
       </h2>

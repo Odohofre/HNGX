@@ -30,7 +30,7 @@ export default function NavBar() {
       </div>
       <SearchBar />
       <div className='flex items-center space-x-3 lg:space-x-[27px]'>
-        <p className="font-bold leading-normal">Sign In</p>
+        <p className="font-bold leading-normal hidden lg:block">Sign In</p>
         <img src={menu} alt="Menu icon" />
       </div>
     </nav>
