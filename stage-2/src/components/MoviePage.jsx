@@ -146,7 +146,7 @@ export default function MoviePage() {
             />
           </div>
         </section>
-        <section className="px-3 mb-5">
+        <section className="px-6 lg:px-3 mb-8 lg:mb-5">
           <div className="flex justify-end">
             <img src={star} alt="star" />
             <p className="text-[#e8e8e8] font-medium text-xl ml-2">
@@ -170,7 +170,7 @@ export default function MoviePage() {
           </button>
           <div className="flex-shrink-0 mt-8 relative">
             <img src={poster} alt="poster showing 3 different movies" />
-            <div className="absolute space-x-3 w-full flex items-center justify-center bottom-0 left-0 py-3 bg-[#121212]/50 text-[#e8e8e8] font-medium text-sm leading-normal backdrop-blur-[2px] rounded-[10px]">
+            <div className="absolute space-x-3 w-full flex items-center justify-center bottom-0 left-0 py-3 bg-[#121212]/50 text-[#a8a1a1] font-medium text-sm leading-normal backdrop-blur-[2px] rounded-[10px]">
               <img src={listBlack} alt="list" />{' '}
               <span>The Best Movies and Shows in September</span>
             </div>
