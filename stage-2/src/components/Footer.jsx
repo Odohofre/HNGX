@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="lg:w-[31rem] flex flex-col mx-auto space-y-9 my-12 lg:mt-36  lg:mb-[73px]">
+    <footer className="lg:w-[31rem] flex flex-col mx-auto space-y-9 my-12 mt-6 lg:mt-36  lg:mb-[73px]">
       <div className="flex justify-center space-x-12">
         <a href="#">
           <svg

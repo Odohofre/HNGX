@@ -146,7 +146,7 @@ export default function MoviePage() {
             />
           </div>
         </section>
-        <section className="px-6 lg:px-3 mb-8 lg:mb-5">
+        <section className="px-4 lg:px-3 mb-8 lg:mb-5">
           <div className="flex justify-end">
             <img src={star} alt="star" />
             <p className="text-[#e8e8e8] font-medium text-xl ml-2">

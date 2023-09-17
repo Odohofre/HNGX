@@ -12,7 +12,7 @@ const apikey = import.meta.env.VITE_API_KEY;
 
 const movieOptions = {
   method: 'GET',
-  url: 'https://api.themoviedb.org/3/movie/top_rated?language=en-US',
+  url: 'https://api.themoviedb.org/3/movie/popular?language=en-US',
   headers: {
     accept: 'application/json',
     Authorization: `Bearer ${accesskey}`,
