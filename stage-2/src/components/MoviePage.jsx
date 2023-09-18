@@ -74,8 +74,8 @@ export default function MoviePage() {
             <p>Writers: {extractWriter(movie)}</p>
             <p>Stars: {extractCast(movie)}</p>
           </div>
-          <div className="mt-6 font-medium border rounded-[10px] flex flex-col lg:flex-row items-center pb-4 lg:pb-4 bg-white/80 border-[#c7c7c7] relative">
-            <span className="text-white bg-rose-700 rounded-[10px] text-center py-3 px-5 w-full mb-3 lg:mb-0 lg:mr-6">
+          <div className="mt-6 font-medium border rounded-[10px] flex flex-col lg:flex-row items-center pb-4 lg:pb-0 bg-white/80 border-[#c7c7c7] relative">
+            <span className="text-white bg-rose-700 rounded-[10px] text-center py-3 px-5 w-full lg:w-60 mb-3 lg:mb-0 lg:mr-6">
               {' '}
               Top Rated movie #65
             </span>
