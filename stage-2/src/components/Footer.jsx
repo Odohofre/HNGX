@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="lg:w-[31rem] flex flex-col mx-auto space-y-9 my-12 mt-6 lg:mt-36  lg:mb-[73px]">
+    <footer className="lg:w-[31rem] flex flex-col mx-auto space-y-7 my-12 mt-6 lg:mt-36  lg:mb-[73px]">
       <div className="flex justify-center space-x-12">
         <a href="#">
           <svg
@@ -75,7 +75,7 @@ export default function Footer() {
           </svg>
         </a>
       </div>
-      <div className="flex flex-col items-center lg:flex-row lg:space-x-12 space-y-3">
+      <div className="flex flex-col items-center lg:flex-row lg:space-x-12 space-y-3 lg:space-y-0">
         <a href="#" className="text-gray-900 text-lg font-bold">
           Conditions of Use
         </a>

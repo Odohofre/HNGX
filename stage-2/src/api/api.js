@@ -1,63 +1,64 @@
 import axios from 'axios';
 
-// const instance = axios.create({
-//   baseURL: 'https://api.themoviedb.org/3/',
-//   params: {
-//     api_key: API_KEY,
-//   }
-// })
-
 const accesskey = import.meta.env.VITE_ACCESS_TOKEN;
 const apikey = import.meta.env.VITE_API_KEY;
 
-const movieOptions = {
-  method: 'GET',
-  url: 'https://api.themoviedb.org/3/movie/popular?language=en-US',
+const options = {
+  baseURL: 'https://api.themoviedb.org/3/',
   headers: {
+    'Content-Type': 'application/json',
     accept: 'application/json',
-    Authorization: `Bearer ${accesskey}`,
+    Authorization: `Bearer ${accesskey}`
   },
+  params: {
+    language: 'en-US',
+    api_key: apikey
+  }
 };
 
-export async function getMovies() {
+const instance = axios.create(options);
+
+export const getMovies = async () => {
   try {
-    const response = await axios.request(movieOptions);
+    const response = await instance.get('movie/popular');
     return response.data;
   } catch (error) {
     console.error(error);
   }
-}
+};
 
-export async function getGenres() {
+export const getGenres = async () => {
   try {
-    const response = await axios.get(
-      `https://api.themoviedb.org/3/genre/movie/list?api_key=${apikey}`
-    );
+    const response = await instance.get('genre/movie/list');
     return response.data;
   } catch (error) {
     console.error(error);
   }
-}
+};
 
-export async function searchMovie(query) {
+export const searchMovie = async (query) => {
   try {
-    const response = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${query}&language=en-US&page=1`
-    );
+    const response = await instance.get('search/movie', {
+      params: {
+        query,
+        page: 1
+      }
+    });
     return response.data;
   } catch (error) {
     console.error(error);
   }
-}
+};
 
-export async function getMovieDetails(movie_id) {
+export const getMovieDetails = async (movie_id) => {
   try {
-    const response = await axios.get(
-      `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apikey}&append_to_response=videos,credits`
-    );
+    const response = await instance.get(`movie/${movie_id}`, {
+      params: {
+        append_to_response: 'videos,credits'
+      }
+    });
     return response.data;
   } catch (error) {
     console.error("Can't find movie with id: ", error);
   }
-}
-// https://api.themoviedb.org/3/movie/{movie_id}
+};

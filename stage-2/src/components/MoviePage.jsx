@@ -2,6 +2,13 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieDetails } from '../api/api';
+import {
+  extractYear,
+  extractCast,
+  extractDirector,
+  extractGenre,
+  extractWriter,
+} from '../utils';
 import arrow from '../assets/Expand Arrow.png';
 import star from '../assets/Star.png';
 import tickets from '../assets/Two Tickets.png';
@@ -25,72 +32,6 @@ export default function MoviePage() {
 
     fetchMovieDetails(id);
   }, [id]);
-
-  function extractYear(movieData) {
-    if (movieData.release_date && movieData.release_date.length > 1) {
-      const parts = movieData.release_date.split('-');
-      if (parts.length >= 1) {
-        return parts[0];
-      } else {
-        return '';
-      }
-    }
-  }
-
-  function extractGenre(movieData) {
-    if (movieData && movieData.genres && movieData.genres.length > 0) {
-      return movieData.genres.map((genre) => (
-        <span
-          className="text-[15px] text-red-700 border rounded-[15px] px-3 lg:px-[17px] py-1"
-          key={genre.name}
-        >
-          {genre.name}
-        </span>
-      ));
-    }
-    return <span>No genres</span>;
-  }
-
-  function extractDirector(movieData) {
-    if (movieData && movieData.credits && movieData.credits.crew) {
-      const director = movieData.credits.crew.find(
-        (person) => person.job === 'Director'
-      );
-      return director ? (
-        <span className="text-rose-700">{director.name}</span>
-      ) : (
-        ''
-      );
-    }
-    return '';
-  }
-
-  function extractCast(movieData) {
-    if (movieData && movieData.credits && movieData.credits.cast) {
-      const actors = movieData.credits.cast
-        .slice(0, 3)
-        .map((member) => member.name)
-        .join(', ');
-      return <span className="text-rose-700">{actors}</span>;
-    }
-    return '';
-  }
-
-  function extractWriter(movieData) {
-    if (movieData && movieData.credits && movieData.credits.crew) {
-      const writerSet = new Set(); // Use a set to ensure uniqueness
-      const writers = movieData.credits.crew
-        .filter((person) => person.department === 'Writing')
-        .map((writer) => writer.name);
-
-      // Add writers to the set to ensure uniqueness
-      writers.forEach((writer) => writerSet.add(writer));
-
-      const uniqueWriter = Array.from(writerSet).join(', ');
-      return <span className="text-rose-700">{uniqueWriter}</span>;
-    }
-    return '';
-  }
 
   return (
     <main className="w-full px-5 pt-5 lg:flex flex-col items-center">

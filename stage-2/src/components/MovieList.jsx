@@ -10,7 +10,7 @@ export default function MovieList() {
     async function fetchMovies() {
       try {
         const movieData = await getMovies();
-        setMovies(movieData.results.slice(0, 10));
+        setMovies(movieData.results);
       } catch (error) {
         console.error(error);
       }
