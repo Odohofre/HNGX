@@ -14,7 +14,7 @@ export default function HeroDescription({movie}) {
 
   return (
     <article className={`flex items-center bg-black/30 py-4 p-3 flex-col gap-4 max-w-[25rem] ${isVisible ? 'mx-3 lg:ml-[8%]' : '-ml-96'} transition-all duration-1000 ease-in-out m-auto`}>
-      <h2 className="text-4xl leading-[56px] text-justify font-bold">
+      <h2 className="text-4xl leading-[56px] text-left font-bold">
         {movie.title}
       </h2>
       <div className="flex space-x-9">
