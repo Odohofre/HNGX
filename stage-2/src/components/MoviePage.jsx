@@ -39,7 +39,7 @@ export default function MoviePage() {
         <div className="overflow-hidden pb-[100%] lg:pb-[35%] rounded-[20px] relative w-full">
           <iframe
             className="absolute w-full h-full top-0 left-0"
-            src={`https://www.youtube.com/embed/${movie.videos.results[2].key}`}
+            src={`https://www.youtube.com/embed/${movie.videos.results[1].key}`}
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

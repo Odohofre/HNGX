@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import imdbLogo from '../assets/imdb.png';
 import rottenTomatoesLogo from '../assets/rotten_Tomatoes.png';
 
-export default function HeroDescription() {
+export default function HeroDescription({movie}) {
   const [isVisible, setIsVisible] = useState(false);
 
   // Add a delay to simulate the slide-in animation
@@ -13,9 +13,9 @@ export default function HeroDescription() {
   }, []);
 
   return (
-    <article className={`flex flex-col gap-4 max-w-[25rem] ${isVisible ? 'ml-[10%] lg:ml-[8%]' : '-ml-96'} transition-all duration-1000 ease-in-out m-auto`}>
+    <article className={`flex bg-black/50 p-10 flex-col gap-4 max-w-[25rem] ${isVisible ? 'ml-[10%] lg:ml-[8%]' : '-ml-96'} transition-all duration-1000 ease-in-out m-auto`}>
       <h2 className="text-5xl leading-[56px] font-bold">
-        John Wick 3 : Parabelleum
+        {movie.title}
       </h2>
       <div className="flex space-x-9">
         <div className="flex text-xs space-x-2.5">
@@ -27,12 +27,10 @@ export default function HeroDescription() {
         </div>
       </div>
       <p className="text-sm leading-[18px] w-[302px] font-medium">
-        John Wick is on the run after killing a member of the international
-        assassins' guild, and with a $14 million price tag on his head, he is
-        the target of hit men and women everywhere.
+        {movie.overview}
       </p>
-      <a
-        href="https://www.imdb.com/video/vi3978017305/?ref_=tt_vi_t_2"
+      {movie.videos && movie.videos.results.length > 0 && ( <a
+        href={`https://www.youtube.com/watch?v=${movie.videos.results[1].key}`}
         target='_blank'
         className="w-44 bg-rose-700 px-4 py-1.5 rounded-md inline-flex items-center"
       >
@@ -52,7 +50,8 @@ export default function HeroDescription() {
           />
         </svg>
         WATCH TRAILER
-      </a>
+      </a>)}
+     
     </article>
   );
 }
