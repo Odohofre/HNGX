@@ -6,7 +6,7 @@ import logoutImage from '../assets/Logout.png';
 
 export default function SideBar() {
   return (
-    <aside className="hidden lg:flex w-60 flex-col border h-screen overflow-y-auto text-[#666] border-black/30 rounded-r-[45px] pt-10 pb-16">
+    <aside className="hidden lg:flex w-60 flex-col border h-screen overflow-y-hidden text-[#666] border-black/30 rounded-r-[45px] pt-10 pb-16">
       <div className="mb-6">
         <a href="/" className="flex items-center space-x-4 px-5">
           <img src={movieboxLogo} alt="movie box logo" />
