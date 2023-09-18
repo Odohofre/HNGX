@@ -81,6 +81,7 @@ export default function MoviePage() {
             </span>
             Awards 9 nominations{' '}
             <img
+            loading='lazy'
               className="absolute hidden lg:block right-[2%] top-[20%]"
               src={arrow}
               alt="a downward arrow"
@@ -110,7 +111,7 @@ export default function MoviePage() {
             <span>More watch options</span>
           </button>
           <div className="flex-shrink-0 mt-8 relative">
-            <img src={poster} alt="poster showing 3 different movies" />
+            <img src={poster} loading="lazy" alt="poster showing 3 different movies" />
             <div className="absolute space-x-3 w-full flex items-center justify-center bottom-0 left-0 py-3 bg-[#121212]/50 text-[#a8a1a1] font-medium text-sm leading-normal backdrop-blur-[2px] rounded-[10px]">
               <img src={listBlack} alt="list" />{' '}
               <span>The Best Movies and Shows in September</span>

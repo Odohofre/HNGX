@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import imdbLogo from '../assets/imdb.png';
 import { Link } from 'react-router-dom';
 
+
+const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
 export default function MovieCard({
   id,
   img,
@@ -11,7 +13,7 @@ export default function MovieCard({
   genre,
 }) {
   const [isClicked, setIsClicked] = useState(false);
-  const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
+  
 
   const handleButtonClick = () => {
     setIsClicked(!isClicked);
@@ -58,6 +60,7 @@ export default function MovieCard({
           <img
             src={`${IMG_PATH}${img}`}
             alt={title}
+            loading='lazy'
             data-testid="movie-poster"
           />
         </div>

@@ -13,8 +13,8 @@ export default function HeroDescription({movie}) {
   }, []);
 
   return (
-    <article className={`flex bg-black/50 p-10 flex-col gap-4 max-w-[25rem] ${isVisible ? 'ml-[10%] lg:ml-[8%]' : '-ml-96'} transition-all duration-1000 ease-in-out m-auto`}>
-      <h2 className="text-5xl leading-[56px] font-bold">
+    <article className={`flex items-center bg-black/30 py-4 p-3 flex-col gap-4 max-w-[25rem] ${isVisible ? 'ml-[10%] lg:ml-[8%]' : '-ml-96'} transition-all duration-1000 ease-in-out m-auto`}>
+      <h2 className="text-4xl leading-[56px] text-justify font-bold">
         {movie.title}
       </h2>
       <div className="flex space-x-9">
