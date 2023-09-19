@@ -21,12 +21,19 @@ export default function ImageList() {
     fetchData();
   }, []);
 
+  const moveImage = (fromIndex, toIndex) => {
+    const updateImages = [...images];
+    const [movedImage] = updateImages.splice(fromIndex, 1);
+    updateImages.splice(toIndex, 0, movedImage);
+    setImages(updateImages)
+  }
+
   return (
-    <div>
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] object-cover gap-x-8 gap-y-14 lg:gap-y-10">
       {isLoading ? (
         <Skeleton />
       ) : (
-        images.map((image) => <ImageCard image={image} />)
+        images.map((image, index) => <ImageCard key={image.id} index={index} image={image} moveImage={moveImage} />)
       )}
     </div>
   );
