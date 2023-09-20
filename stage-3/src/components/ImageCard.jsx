@@ -28,17 +28,17 @@ export default function ImageCard({ image, index, moveImage }) {
         refDrop(node);
       }}
   
-      className="relative opacity-100 cursor-move mb-10"
+      className={`relative ${ isDragging ? 'opacity-50': 'opacity-100'} cursor-move mb10`}
     >
       <img
-        width="250"
-        height="360"
+        width="240"
+        height="135"
         loading="lazy"
         src={image.webformatURL}
         alt={image.tags}
       />
       <span className="tag">{image.tags}</span>
-      <div className='absolute top-2 right-2 bg-white/30 backdrop-blur-sm p-1'>
+      <div className='absolute top-[5%] right-[10%] bg-white/30 backdrop-blur-sm rounded-full p-1'>
         <svg
           fill="#000000"
           xmlns="http://www.w3.org/2000/svg"
