@@ -17,7 +17,7 @@ Follow these instructions to run the project locally on your machine.
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/Odohofre/HNGX/tree/main/stage-2
    cd movie-discovery-app
    ```
 

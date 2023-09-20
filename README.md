@@ -10,3 +10,4 @@ This repository contains links done by me as it pertains to each stage. I will u
 
 - [Stage one](https://odohofre.github.io/HNGX/stage-1/)
 - [Stage two](https://moviebox-blush.vercel.app/)
+- [Stage three](https://dnd-image-gallery-pi.vercel.app/gallery)
