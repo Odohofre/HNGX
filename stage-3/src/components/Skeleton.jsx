@@ -4,7 +4,7 @@ export default function Skeleton() {
   const count = 20;
 
   return (
-    <section className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] object-cover gap-x-4 gap-y-5 lg:gap-y-10">
+    <section className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-x-4 gap-y-5 lg:gap-y-10">
       {[...Array(count)].map((_, index) => (
         <div
           role="status"

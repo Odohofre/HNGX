@@ -2,7 +2,6 @@ import React from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 
 export default function ImageCard({ image, index, moveImage }) {
-  
   const [{ isDragging }, refDrag] = useDrag({
     type: 'IMAGE',
     item: { id: image.id, index },
@@ -23,20 +22,20 @@ export default function ImageCard({ image, index, moveImage }) {
 
   return (
     <div
-      ref={node => {
-        refDrag(node);
-        refDrop(node);
-      }}
-  
-      className={`relative ${ isDragging ? 'opacity-50 transform scale-90 transition-transform duration-300': 'opacity-100'} rounded-lg overflow-hidden borde cursor-move h-[135px`}
+      ref={refDrop}
+      className={`relative ${
+        isDragging
+          ? 'opacity-50 transform scale-90 transition-transform duration-300'
+          : 'opacity-100'
+      } rounded-lg overflow-hidden borde cursor-move h-[135px`}
     >
-      <img
-        loading="lazy"
-        src={image.webformatURL}
-        alt={image.tags}
-      />
+      <img loading="lazy" src={image.webformatURL} alt={image.tags} />
       {/* <span className="align-center mt-2">{image.tags}</span> */}
-      <div className='absolute top-[5%] right-[10%] bg-white/30 backdrop-blur-sm rounded-full p-1'>
+      <div
+        className="absolute top-[5%] right-[10%] bg-white/30 backdrop-blur-sm rounded-full p-1"
+        ref={refDrag}
+        // draggable="true"
+      >
         <svg
           fill="#000000"
           xmlns="http://www.w3.org/2000/svg"

@@ -33,7 +33,7 @@ export default function Gallery() {
           setTimeout(() => {
             setImages(data);
             setLoading(false);
-          }, 1000);
+          }, 2000);
         })
         .catch((error) => {
           console.error('Error fetching tags:', error);
@@ -52,7 +52,6 @@ export default function Gallery() {
   return (
     <main className='mx-5 my-10 space-y-4'>
       <h1 className='text-2xl'>Welcome</h1>
-      <h3>Random images from Pixabay</h3>
       <input
         type="text"
         name="search"
