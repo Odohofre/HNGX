@@ -18,6 +18,9 @@ export const useLogin = () => {
     } catch (error) {
       console.log(error.message);
       switch (error.code) {
+        case 'auth/invalid-login-credentials':
+          setError('invalid login credential')
+          return
         case 'auth/invalid-email':
           setError('Email provided is invalid');
           return;
