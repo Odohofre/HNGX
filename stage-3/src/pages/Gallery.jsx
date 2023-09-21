@@ -50,12 +50,13 @@ export default function Gallery() {
   };
 
   return (
-    <main>
-      <h1>Welcome</h1>
+    <main className='mx-5 my-10 space-y-4'>
+      <h1 className='text-2xl'>Welcome</h1>
       <h3>Random images from Pixabay</h3>
       <input
         type="text"
         name="search"
+        placeholder='Search tags'
         value={searchText}
         onChange={handleInputChange}
         className="block w-full lg:max-w-xs rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 mb-4 text-gray-500"

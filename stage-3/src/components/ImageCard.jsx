@@ -28,16 +28,14 @@ export default function ImageCard({ image, index, moveImage }) {
         refDrop(node);
       }}
   
-      className={`relative ${ isDragging ? 'opacity-50': 'opacity-100'} cursor-move mb10`}
+      className={`relative ${ isDragging ? 'opacity-50 transform scale-90 transition-transform duration-300': 'opacity-100'} rounded-lg overflow-hidden borde cursor-move h-[135px`}
     >
       <img
-        width="240"
-        height="135"
         loading="lazy"
         src={image.webformatURL}
         alt={image.tags}
       />
-      <span className="tag">{image.tags}</span>
+      {/* <span className="align-center mt-2">{image.tags}</span> */}
       <div className='absolute top-[5%] right-[10%] bg-white/30 backdrop-blur-sm rounded-full p-1'>
         <svg
           fill="#000000"
