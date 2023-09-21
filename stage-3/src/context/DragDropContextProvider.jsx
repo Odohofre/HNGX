@@ -11,5 +11,5 @@ const isTouchDevice = () => {
 
 const backendforDND = isTouchDevice() ? TouchBackend : HTML5Backend
 export const DragDropContextProvider = ({ children }) => {
-  return <DndProvider backend={backendforDND}>{children}</DndProvider>;
+  return <DndProvider backend={backendforDND} delayTouchStart="300">{children}</DndProvider>;
 };

@@ -6,7 +6,7 @@ const apiUrl = `https://pixabay.com/api/`;
 export const getRandomImages = async () => {
   try {
     const response = await axios.get(
-      `${apiUrl}?key=${apiKey}&per_page=20&orientation=horizontal`
+      `${apiUrl}?key=${apiKey}&q=code&per_page=20&orientation=horizontal`
     );
     return response.data.hits;
   } catch (error) {
@@ -16,7 +16,6 @@ export const getRandomImages = async () => {
 };
 
 export const searchImages = async (query) => {
-
   try {
     const encodedQuery = encodeURIComponent(query);
     const response = await axios.get(
@@ -28,4 +27,3 @@ export const searchImages = async (query) => {
     return [];
   }
 };
-

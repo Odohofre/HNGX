@@ -4,13 +4,14 @@ export default function Skeleton() {
   const count = 20;
 
   return (
-    <section className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-x-4 gap-y-5 lg:gap-y-10">
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-x-4 gap-y-5 lg:gap-y-10">
       {[...Array(count)].map((_, index) => (
         <div
           role="status"
+          key={index}
           className="w-64 p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700"
         >
-          <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+          <div className="flex items-center justify-center h-[135px] mb-4 bg-gray-300 rounded dark:bg-gray-700">
             <svg
               className="w-10 h-10 text-gray-200 dark:text-gray-600"
               aria-hidden="true"
@@ -22,14 +23,14 @@ export default function Skeleton() {
               <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
             </svg>
           </div>
-          <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+          {/* <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
           <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
           <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-          <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+          <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div> */}
 
           <span className="sr-only">Loading...</span>
         </div>
       ))}
-    </section>
+    </div>
   );
 }
