@@ -66,7 +66,7 @@ export default function SignUp() {
           >
             Sign Up
           </button>
-          {error && <p>{error}</p>}
+          {error && <p className="text-red-600 text-semibold mt-3">{error}</p>}
         </form>
         <p className="text-label mt-3">
           Already have an account!{' '}
