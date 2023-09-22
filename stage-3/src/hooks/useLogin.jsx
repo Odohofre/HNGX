@@ -19,10 +19,10 @@ export const useLogin = () => {
       console.log(error.message);
       switch (error.code) {
         case 'auth/invalid-login-credentials':
-          setError('invalid login credential')
+          setError('Invalid login details')
           return
         case 'auth/invalid-email':
-          setError('Email provided is invalid');
+          setError('Invalid email address');
           return;
 
         case 'auth/user-not-found':
@@ -30,7 +30,7 @@ export const useLogin = () => {
           return;
 
         case 'auth/wrong-password':
-          setError('user credential is wrong');
+          setError('Email or password is wrong');
           return;
 
         default:

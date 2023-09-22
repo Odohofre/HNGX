@@ -43,6 +43,7 @@ export default function SignUp() {
             onChange={handleEmailChange}
             placeholder="Enter your email address"
             className="bg-input/40 text-black/50 w-full py-2.5 pl-4 rounded-lg mt-1 text-sm focus:ring-black focus:border-black focus:outline-none focus:ring-2"
+            required
           />
           <label
             htmlFor="password"
@@ -57,6 +58,7 @@ export default function SignUp() {
             placeholder="******"
             onChange={handlePasswordChange}
             className="bg-input/40 text-black/50 w-full py-2.5 pl-4 rounded-lg text-sm mt-1 focus:ring-black focus:border-black focus:outline-none focus:ring-2"
+            required
           />
           <button
             type="submit"

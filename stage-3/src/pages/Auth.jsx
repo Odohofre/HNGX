@@ -25,7 +25,9 @@ export default function Auth() {
   };
 
   return (
-    <main className="flex h-screen items-center justify-center">
+    <main className="flex flex-col h-screen items-center justify-center">
+      <h1 className="text-2xl lg:text-4xl mb-4">Welcome to Image Gallery</h1>
+
       <div className="bg-background px-5 py-10 lg:px-16 rounded-[20px]">
         <form onSubmit={handleSubmit} className="flex flex-col min-w-full">
           <label htmlFor="email" className="text-label text-lg font-medium">
@@ -37,9 +39,9 @@ export default function Auth() {
             value={email}
             onChange={handleEmailChange}
             placeholder="johndoe@gmail.com"
-            className="bg-input/40 text-black/50 w-full py-2.5 pl-4 rounded-lg mt-1 text-sm focus:ring-black focus:border-black focus:outline-none focus:ring-2"
+            className="bg-input/40 text-black/50 w-full py-2.5 pl-4 rounded-lg mt-1 text-sm focus:ring-black focus:border-black focus:outline-none focus:ring-2" required
           />
-          <label htmlFor="password" className="text-label text-lg font-medium">
+          <label htmlFor="password" className="text-label text-lg font-medium mt-2">
             Password:
           </label>
           <input
@@ -48,7 +50,7 @@ export default function Auth() {
             value={password}
             onChange={handlePasswordChange}
             placeholder="*****"
-            className="bg-input/40 text-black/50 w-full py-2.5 pl-4 rounded-lg mt-1 text-sm focus:ring-black focus:border-black focus:outline-none focus:ring-2"
+            className="bg-input/40 text-black/50 w-full py-2.5 pl-4 rounded-lg mt-1 text-sm focus:ring-black focus:border-black focus:outline-none focus:ring-2" required
           />
           <button
             type="submit"
@@ -56,7 +58,7 @@ export default function Auth() {
           >
             Login
           </button>
-          {error && <p>{error}</p>}
+          {error && <p className="text-red-600 text-semibold mt-3">{error}</p>}
         </form>
         <p className="text-label mt-3">
           Dont' have an account?{' '}
