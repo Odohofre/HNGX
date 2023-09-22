@@ -30,7 +30,7 @@ export default function ImageCard({ image, index, moveImage }) {
       } rounded-lg overflow-hidden borde cursor-move h-[135px`}
     >
       <img loading="lazy" src={image.webformatURL} alt={image.tags} />
-      {/* <span className="align-center mt-2">{image.tags}</span> */}
+      <span className="align-center mt-1">{image.tags}</span>
       <div
         className="absolute top-[5%] right-[10%] bg-white/30 backdrop-blur-sm rounded-full p-1"
         ref={refDrag}
